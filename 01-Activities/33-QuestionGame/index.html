@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    hii..
+
+    <script>
+          var question1 = {
+              q : "Is the sky red",
+              a : false
+          };
+
+        var  question2 = {
+              q : "are you Indian",
+              a : true
+          };
+
+        var  question3 = {
+              q : "do you love beef",
+              a : false
+          };
+
+       var   question4 = {
+              q : "are you vegetarian",
+              a : false
+          };
+
+         var question5 = {
+              q : "do you smoke",
+              a : false
+          };
+      
+
+      var questionArray = [question1, question2, question3, question4, question5];
+
+    //   var questionArray = [
+    //     { q: "Are you mad", a: false },
+    //     { q: "Are you mad1", a: false },
+    //     { q: "Are you mad2", a: true },
+    //     { q: "Are you mad3", a: false },
+    //     { q: "Are you mad4", a: true },
+    //   ];
+      for (i = 0; i < questionArray.length; i++) {
+    //    var name =  confirm(questionArray[i].q);
+        if (confirm(questionArray[i].q) === questionArray[i].a) {
+          alert("your answer is correct");
+        } else {
+          alert("your answer is wrong");
+        }
+      }
+    </script>
+  </body>
+</html>

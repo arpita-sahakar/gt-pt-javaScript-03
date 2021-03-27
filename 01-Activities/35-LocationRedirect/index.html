@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    hello world
+
+    <script>
+      console.log(window);
+      if (navigator.appVersion.indexOf("Win") != -1) {
+        alert("welcome window user");
+      }
+      if (navigator.appVersion.indexOf("Mac") != -1) alert("welcome Mac user");
+      if (navigator.appVersion.indexOf("X11") != -1) alert("welcome X11 user");
+      if (navigator.appVersion.indexOf("Linux") != -1) alert("welcome Linux user");
+
+  
+      //window.navigator.geolocation.getCurrentPosition(console.log);
+      window.navigator.geolocation.getCurrentPosition(function(position){
+        console.log(position.coords);
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+
+        if(lat>=30 && lng<=100){
+
+        }else
+      });
+
+    </script>
+  </body>
+</html>

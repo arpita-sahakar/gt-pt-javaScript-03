@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <script>
+      var win = 0;
+      var loss = 0;
+      var tie = 0;
+      for (i = 0; i < 3; i++) {
+        var humanResponse = prompt("Enter your response");
+
+        var availableResponse = ["rock", "paper", "scissor"];
+        var randomOutput = [Math.floor(Math.random() * 3)];
+        //   alert(randomOutput);
+        var computerResponse = availableResponse[randomOutput];
+        alert(computerResponse);
+
+        //scissor>paper; paper>rock; rock>scissor;
+
+        //Tie condition
+
+        if (computerResponse === humanResponse) {
+          alert("its a tie");
+          tie++;
+        } else if (
+          //computer win condition
+          (computerResponse === "scissor" && humanResponse === "paper") ||
+          (computerResponse === "paper" && humanResponse === "rock") ||
+          (computerResponse === "rock" && humanResponse === "scissor")
+        ) {
+          alert("computer wins");
+          loss++;
+        } else if (
+          //human win conditions
+          (humanResponse === "scissor" && computerResponse === "paper") ||
+          (humanResponse === "paper" && computerResponse === "rock") ||
+          (humanResponse === "rock" && computerResponse === "scissor")
+        ) {
+          alert("You wins");
+          win++;
+        }
+      }
+      alert (win + loss + tie);
+
+      if (win>loss){
+          alert("you are the final winner");
+      }else if (loss>win){
+          alert("final winner is computer");
+      }else {
+          alert("its a tie");
+      }
+    </script>
+  </body>
+</html>
